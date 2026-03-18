@@ -1,0 +1,146 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.hello {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: black;
+  padding: 15px 30px;
+}
+
+.logo {
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.menu {
+  display: flex;
+}
+
+.menu li {
+  margin-left: 20px;
+}
+
+.menu a {
+  color: white;
+}
+
+.container {
+  background: linear-gradient(to right, #1e3c72, #2a5298);
+  color: white;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.boxes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  padding: 30px;
+}
+
+.box {
+  flex:0 0calc(25% - 15px);
+  background-color: lightblue;
+  text-align: center;
+  padding: 30px 20px;
+  border-radius: 5px;
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .boxes {
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  .box {
+    flex: 0 0 calc(50% - 15px);
+    margin-bottom: 15px;
+  }
+  .boxes .box:last-child {
+    flex: 0 0 calc(50%-15px);
+  }
+  .menu {
+    flex-direction: row;
+  }
+}
+@media (max-width: 480px) {
+ 
+  .hello {
+    flex-direction: column;
+    text-align: center;
+    padding: 15px;
+  }
+
+  .menu {
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  .menu li {
+    margin: 0 10px;
+  }
+
+  .container {
+    background: #d84a3a;
+    padding: 40px 20px;
+    font-size: 18px;
+  }
+
+  .boxes {
+    flex-direction: column;
+   
+  }
+
+  .box {
+    width: 100%;
+    flex: 0 0 100%;
+    padding: 40px 20px;
+  }
+
+  .box:last-child {
+    border-bottom: none;
+  }
+  .box i {
+    font-size: 35px;
+  }
+  .box h3 {
+    margin: 10px 0;
+  }
+  .box p {
+    font-size: 14px;
+  }
+  .copyright {
+    font-size: 12px;
+    padding: 12px;
+  }
+}
+.box i {
+  font-size: 40px;
+  margin-bottom: 15px;
+  color: #1e3c72;
+}
+.menu a {
+  transition: 0.3s;
+}.menu a:hover {
+  color: #00bfff;
+}
+
+.copyright {
+  background: #222;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 20px;
+  font-size: 15px;
+}
+.separator {
+  height: 10px;
+  background: white;
+}
